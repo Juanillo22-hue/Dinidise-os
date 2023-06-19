@@ -1,9 +1,15 @@
 <?php
 
-$conex = mysqli_connect("localhost","root","");
+ $host="localhost";
+ $bd="proyecto";
+ $usuario="root";
+ $contraseña="";
 
-if(!$conex){
-    die ("Error connecting".mysqli_connect_error());
-}
+ try {
+    $conexion=new PDO("mysql:host=$host;dbname=$bd",$usuario,$contraseña);
+    if($conexion){echo "";}
+ }catch (Exception $ex){
+    echo $ex->getMessage();
 
-echo "conex connected";
+ }
+?>
