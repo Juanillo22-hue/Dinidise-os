@@ -13,6 +13,7 @@ if (isset($_POST['update'])) {
 	$correo = mysqli_real_escape_string($mysqli, $_POST['correo']);
 	$telefono = mysqli_real_escape_string($mysqli, $_POST['telefono']);
 	$observacion = mysqli_real_escape_string($mysqli, $_POST['observacion']);
+	$area = mysqli_real_escape_string($mysqli, $_POST['area']);
 	
 	// Check for empty fields
 	if (empty($nombre) || empty($apellido) || empty($correo) || empty($rh)) {
@@ -32,7 +33,7 @@ if (isset($_POST['update'])) {
 		}
 	} else {
 		// Update the database table
-		$result = mysqli_query($mysqli, "UPDATE users SET `nombre` = '$nombre', `apellido` = '$apellido',`rh` = '$rh', `tipodocumento` = '$tipodocumento', `numerodocumento` = '$numerodocumento', `correo` = '$correo', `telefono` = '$telefono' , `observacion` = '$observacion'  WHERE `id` = $id");
+		$result = mysqli_query($mysqli, "UPDATE users SET `nombre` = '$nombre', `apellido` = '$apellido',`rh` = '$rh', `tipodocumento` = '$tipodocumento', `numerodocumento` = '$numerodocumento', `correo` = '$correo', `telefono` = '$telefono' , `observacion` = '$observacion', `area` = '$area'  WHERE `id` = $id");
 		
 		// Display success message
 		echo "<p><font color='green'>Informacion actualizada correctamente</p>";

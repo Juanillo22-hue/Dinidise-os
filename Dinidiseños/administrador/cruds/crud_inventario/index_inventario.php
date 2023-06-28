@@ -19,9 +19,10 @@ $result = mysqli_query($mysqli, "SELECT * FROM inventario ORDER BY Id DESC");
 	<table width='80%' border=0>
 		<tr bgcolor='#DDDDDD'>
 			<td><strong>Nombre</strong></td>
-			<td><strong>cantidad</strong></td>
-			<td><strong>precio</strong></td>
-			<td><strong>observacion</strong></td>
+			<td><strong>Cantidad</strong></td>
+			<td><strong>Durabilidad</strong></td>
+			<td><strong>Precio</strong></td>
+			<td><strong>Observacion</strong></td>
 		</tr>
 		<?php
 		// Fetch the next row of a result set as an associative array
@@ -29,6 +30,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM inventario ORDER BY Id DESC");
 			echo "<tr>";
 			echo "<td>".$res['nombre']."</td>";
 			echo "<td>".$res['cantidad']."</td>";
+			echo "<td>".$res['durabilidad']."</td>";
 			echo "<td>".$res['precio']."</td>";
 			echo "<td>".$res['observacion']."</td>";
 			echo "<td><a href=\"editView.php?id=$res[id]\">Editar</a> | 

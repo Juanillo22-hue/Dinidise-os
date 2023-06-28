@@ -54,6 +54,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
 			<td><strong>Correo Electronico</strong></td>
 			<td><strong>Telefono</strong></td>
       <td><strong>Observacion</strong></td>
+      <td><strong>Area</strong></td>
 </thead>
 	
 		</tr>
@@ -71,6 +72,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
 			echo "<td>".$res['correo']."</td>";	
 			echo "<td>".$res['telefono']."</td>";
       echo "<td>".$res['observacion']."</td>";
+      echo "<td>".$res['area']."</td>";
 			echo "<td><a href=\"editView.php?id=$res[id]\">Editar</a></td>";
 			echo "<td><a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('¿Estas seguro que deseas elminar el usuario?')\">Eliminar</a></td>";
 			

@@ -64,6 +64,10 @@ $observacion = $resultData['observacion'];
 				<td>Observacion</td>
 				<td><input type="text" name="observacion" value="<?php echo $observacion; ?>"></td>
 			</tr>
+			<tr> 
+				<td>Area</td>
+				<td><input type="text" name="area" value="<?php echo $area; ?>"></td>
+			</tr>
 			<tr>
 				<td><input type="hidden" name="id" value=<?php echo $id; ?>></td>
 				<td><input type="submit" name="update" value="Actualizar"></td>

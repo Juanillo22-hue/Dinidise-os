@@ -44,6 +44,10 @@
 				<td><input type="text" name="observacion"></td>
 			</tr>
 			<tr> 
+				<td>Area</td>
+				<td><input type="text" name="area"></td>
+			</tr>
+			<tr> 
 				<td></td>
 				<td><input type="submit" name="submit" value="Añadir"></td>
 			</tr>

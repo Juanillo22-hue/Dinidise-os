@@ -13,6 +13,7 @@ $resultData = mysqli_fetch_assoc($result);
 
 $nombre = $resultData['nombre'];
 $cantidad = $resultData['cantidad'];
+$durabilidad = $resultData['durabilidad'];
 $precio = $resultData['precio'];
 $observacion = $resultData['observacion'];
 ?>
@@ -36,6 +37,10 @@ $observacion = $resultData['observacion'];
 			<tr> 
 				<td>Cantidad</td>
 				<td><input type="number" name="cantidad" value="<?php echo $cantidad; ?>"></td>
+			</tr>
+			<tr> 
+				<td>Durabilidad</td>
+				<td><input type="text" name="durabilidad" value="<?php echo $durabilidad; ?>"></td>
 			</tr>
 			<tr> 
 				<td>Precio</td>

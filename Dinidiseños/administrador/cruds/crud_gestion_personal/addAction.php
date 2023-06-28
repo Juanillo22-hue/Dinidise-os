@@ -18,6 +18,7 @@ if (isset($_POST['submit'])) {
 	$correo = mysqli_real_escape_string($mysqli, $_POST['correo']);
 	$telefono = mysqli_real_escape_string($mysqli, $_POST['telefono']);
 	$observacion = mysqli_real_escape_string($mysqli, $_POST['observacion']);
+	$area = mysqli_real_escape_string($mysqli, $_POST['area']);
 		
 	// Check for empty fields
 	if (empty($nombre) || empty($apellido) || empty($tipodocumento) || empty($rh)) {
@@ -42,7 +43,7 @@ if (isset($_POST['submit'])) {
 		// If all the fields are filled (not empty) 
 
 		// Insert data into database
-		$result = mysqli_query($mysqli, "INSERT INTO users (`nombre`, `apellido` , `rh` , `tipodocumento`, `numerodocumento`, `correo`, `telefono`, `observacion` ) VALUES ('$nombre', '$apellido','$rh', '$tipodocumento', '$numerodocumento', '$correo', '$telefono' ,'$observacion')");
+		$result = mysqli_query($mysqli, "INSERT INTO users (`nombre`, `apellido` , `rh` , `tipodocumento`, `numerodocumento`, `correo`, `telefono`, `observacion`, `area` ) VALUES ('$nombre', '$apellido','$rh', '$tipodocumento', '$numerodocumento', '$correo', '$telefono' ,'$observacion','$area')");
 		
 		// Display success message
 		echo "<p><font color='green'>Informacion añadida satisfactoriamente</p>";

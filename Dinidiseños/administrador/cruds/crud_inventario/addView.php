@@ -20,6 +20,10 @@
 				<td><input type="number" name="cantidad"></td>
 			</tr>
 			<tr> 
+				<td>Durabilidad</td>
+				<td><input type="text" name="durabilidad"></td>
+			</tr>
+			<tr> 
 				<td>precio</td>
 				<td><input type="number" name="precio"></td>
 			</tr>
