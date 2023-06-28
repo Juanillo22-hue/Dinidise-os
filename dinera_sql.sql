@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-06-2023 a las 03:34:27
+-- Tiempo de generación: 28-06-2023 a las 03:33:51
 -- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.0.28
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `dinera.sql`
+-- Base de datos: `dinera_sql`
 --
 
 -- --------------------------------------------------------
@@ -75,22 +75,24 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `apellido` varchar(50) NOT NULL,
+  `rh` varchar(500) NOT NULL,
   `tipodocumento` varchar(30) NOT NULL,
   `numerodocumento` int(12) NOT NULL,
   `correo` varchar(50) NOT NULL,
-  `telefono` varchar(11) NOT NULL
+  `telefono` varchar(11) NOT NULL,
+  `observacion` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `nombre`, `apellido`, `tipodocumento`, `numerodocumento`, `correo`, `telefono`) VALUES
-(1, 'fdsfsd', 'fsdfsd', 'fsdfsd', 34243, 'fsdfsd@gmail.com', '534534'),
-(2, 'Diego', 'Santana', 'Cedula', 12234758, 'diego@gmail.com', '122334566'),
-(3, 'Daniel', 'safas', 'cc', 132312312, 'dasdasd@kjh.com', '123123123'),
-(4, 'laura', 'la mami', 'cc', 3232, 'Santifewfer@mail.com', '234234234'),
-(5, 'andres', 'ledesma rodriguez', 'cc', 1064065, 'ledesad@gmail.com', '2131');
+INSERT INTO `users` (`id`, `nombre`, `apellido`, `rh`, `tipodocumento`, `numerodocumento`, `correo`, `telefono`, `observacion`) VALUES
+(1, 'fdsfsd', 'fsdfsd', '', 'fsdfsd', 34243, 'fsdfsd@gmail.com', '534534', ''),
+(2, 'Diego', 'Santana', '', 'Cedula', 12234758, 'diego@gmail.com', '122334566', ''),
+(3, 'Daniel', 'safas', '', 'cc', 132312312, 'dasdasd@kjh.com', '123123123', ''),
+(4, 'laura', 'la mami', '', 'cc', 3232, 'Santifewfer@mail.com', '234234234', ''),
+(5, 'andres', 'ledesma rodriguez', '', 'cc', 1064065, 'ledesad@gmail.com', '2131', '');
 
 -- --------------------------------------------------------
 
@@ -100,6 +102,7 @@ INSERT INTO `users` (`id`, `nombre`, `apellido`, `tipodocumento`, `numerodocumen
 
 CREATE TABLE `ventas` (
   `id` int(11) NOT NULL,
+  `cliente` varchar(500) NOT NULL,
   `material` varchar(500) NOT NULL,
   `pedido` varchar(1000) NOT NULL,
   `imagen` varchar(1000) NOT NULL,
@@ -110,8 +113,8 @@ CREATE TABLE `ventas` (
 -- Volcado de datos para la tabla `ventas`
 --
 
-INSERT INTO `ventas` (`id`, `material`, `pedido`, `imagen`, `precio`) VALUES
-(1, 'madera', 'tarjetas de cumpleaños', 'images.jpg', 35000);
+INSERT INTO `ventas` (`id`, `cliente`, `material`, `pedido`, `imagen`, `precio`) VALUES
+(1, '', 'madera', 'tarjetas de cumpleaños', 'images.jpg', 35000);
 
 --
 -- Índices para tablas volcadas
