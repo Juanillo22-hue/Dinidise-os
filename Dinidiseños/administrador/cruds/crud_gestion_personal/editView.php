@@ -13,11 +13,13 @@ $resultData = mysqli_fetch_assoc($result);
 
 $nombre = $resultData['nombre'];
 $apellido = $resultData['apellido'];
+$rh = $resultData['rh'];
 $tipodocumento = $resultData['tipodocumento'];
 $numerodocumento = $resultData['numerodocumento'];
 $correo = $resultData['correo'];
 $telefono = $resultData['telefono'];
 $observacion = $resultData['observacion'];
+$area = $resultData['area'];
 ?>
 <html>
 <head>	

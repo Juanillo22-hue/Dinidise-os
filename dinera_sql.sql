@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-06-2023 a las 04:53:56
+-- Tiempo de generación: 28-06-2023 a las 06:13:45
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -21,6 +21,14 @@ SET time_zone = "+00:00";
 -- Base de datos: `dinera_sql`
 --
 
+DELIMITER $$
+--
+-- Procedimientos
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ver_proveedores` ()   SELECT * FROM proveedores$$
+
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
@@ -31,6 +39,7 @@ CREATE TABLE `inventario` (
   `id` int(11) NOT NULL,
   `nombre` varchar(255) NOT NULL,
   `cantidad` int(255) NOT NULL,
+  `durabilidad` varchar(1111) NOT NULL,
   `precio` int(255) NOT NULL,
   `observacion` varchar(1111) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -39,11 +48,11 @@ CREATE TABLE `inventario` (
 -- Volcado de datos para la tabla `inventario`
 --
 
-INSERT INTO `inventario` (`id`, `nombre`, `cantidad`, `precio`, `observacion`) VALUES
-(3, 'olivos laminados', 8, 2500, 'n/a'),
-(4, 'cartulina', 255, 1000, 'es para impresiones de carteles promocinales del cliente'),
-(5, 'Madera', 1000, 50000, 'para tarjetas de presentacion'),
-(6, 'Papel delgado', 1500, 4000, 'para invitaciones ');
+INSERT INTO `inventario` (`id`, `nombre`, `cantidad`, `durabilidad`, `precio`, `observacion`) VALUES
+(3, 'olivos laminados', 8, '3 semanas', 2500, 'n/a'),
+(4, 'cartulina', 255, '6 meses', 1000, 'es para impresiones de carteles promocinales del cliente'),
+(5, 'Madera', 1000, '3 meses', 50000, 'para tarjetas de presentacion'),
+(6, 'Papel delgado', 1500, '3 meses', 4000, 'para invitaciones ');
 
 -- --------------------------------------------------------
 
@@ -86,19 +95,20 @@ CREATE TABLE `users` (
   `numerodocumento` int(13) NOT NULL,
   `correo` varchar(50) NOT NULL,
   `telefono` int(13) NOT NULL,
-  `observacion` varchar(500) NOT NULL
+  `observacion` varchar(500) NOT NULL,
+  `area` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `nombre`, `apellido`, `rh`, `tipodocumento`, `numerodocumento`, `correo`, `telefono`, `observacion`) VALUES
-(1, 'Luis', 'Melgarejo', 'O-\r\n', 'Cedula', 1001231232, 'luis@gmail.com', 2147483647, 'Ninguna'),
-(2, 'Diego', 'Santana', 'A+', 'Cedula', 12234758, 'diego@gmail.com', 2147483647, 'Ninguna\r\n'),
-(3, 'Daniel', 'Salazar', 'O+', 'Cedula', 1001231234, 'daniel@gmail.com', 313242341, 'Ninguna\r\n'),
-(4, 'Laura', 'De Santana', 'O+', 'Cedula', 1002312313, 'Santifewfer@mail.com', 2147483647, 'Ninguna'),
-(5, 'andres', 'ledesma rodriguez', 'AB-', 'Cedula', 106406531, 'ledesad@gmail.com', 2147483647, 'tiene dificultades de escucha ');
+INSERT INTO `users` (`id`, `nombre`, `apellido`, `rh`, `tipodocumento`, `numerodocumento`, `correo`, `telefono`, `observacion`, `area`) VALUES
+(1, 'Luis', 'Melgarejo', 'A+', 'Cedula', 1001231232, 'luis@gmail.com', 2147483647, 'Ninguna', 'Armado de pedido'),
+(2, 'Diego', 'Santana', 'O+', 'Cedula', 12234758, 'diego@gmail.com', 2147483647, 'Ninguna', 'Recortes'),
+(3, 'Daniel', 'Salazar', 'O-', 'Cedula', 1001231234, 'daniel@gmail.com', 313242341, 'Ninguna', 'Ventas'),
+(4, 'Laura', 'De Santana', 'O+', 'Cedula', 1002312313, 'Santifewfer@mail.com', 2147483647, 'Ninguna', 'Impresiones'),
+(5, 'andres', 'ledesma rodriguez', 'AB-', 'Cedula', 106406531, 'ledesad@gmail.com', 2147483647, 'tiene dificultades de escucha ', 'Bodega');
 
 -- --------------------------------------------------------
 

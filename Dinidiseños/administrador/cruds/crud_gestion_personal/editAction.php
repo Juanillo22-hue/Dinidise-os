@@ -29,11 +29,11 @@ if (isset($_POST['update'])) {
 			echo "<font color='red'>Email field is empty.</font><br/>";
 		}
 		if (empty($rh)) {
-			echo "<font color='red'>Email field is empty.</font><br/>";
+			echo "<font color='red'>rh field is empty.</font><br/>";
 		}
 	} else {
 		// Update the database table
-		$result = mysqli_query($mysqli, "UPDATE users SET `nombre` = '$nombre', `apellido` = '$apellido',`rh` = '$rh', `tipodocumento` = '$tipodocumento', `numerodocumento` = '$numerodocumento', `correo` = '$correo', `telefono` = '$telefono' , `observacion` = '$observacion', `area` = '$area'  WHERE `id` = $id");
+		$result = mysqli_query($mysqli, "UPDATE users SET `nombre` = '$nombre', `apellido` = '$apellido', `rh` = '$rh' , `tipodocumento` = '$tipodocumento', `numerodocumento` = '$numerodocumento', `correo` = '$correo', `telefono` = '$telefono' , `observacion` = '$observacion', `area` = '$area'  WHERE `id` = $id");
 		
 		// Display success message
 		echo "<p><font color='green'>Informacion actualizada correctamente</p>";
