@@ -1,6 +1,6 @@
 <?php
 $databaseHost = 'localhost';
-$databaseName = 'dinera.sql';
+$databaseName = 'dinera';
 $databaseUsername = 'root';
 $databasePassword = '';
 

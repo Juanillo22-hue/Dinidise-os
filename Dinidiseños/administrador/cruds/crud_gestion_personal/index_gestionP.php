@@ -48,10 +48,12 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
 			<thead>
 			<td><strong>Nombre</strong></td>
 			<td><strong>Apellido</strong></td>
+      <td><strong>Rh</strong></td>
 			<td><strong>Tipo de documento</strong></td>
 			<td><strong>Numero de documento</strong></td>
 			<td><strong>Correo Electronico</strong></td>
 			<td><strong>Telefono</strong></td>
+      <td><strong>Observacion</strong></td>
 </thead>
 	
 		</tr>
@@ -63,10 +65,12 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC");
 			echo "<tr>";
 			echo "<td>".$res['nombre']."</td>";
 			echo "<td>".$res['apellido']."</td>";
+      echo "<td>".$res['rh']."</td>";
 			echo "<td>".$res['tipodocumento']."</td>";
 			echo "<td>".$res['numerodocumento']."</td>";
 			echo "<td>".$res['correo']."</td>";	
 			echo "<td>".$res['telefono']."</td>";
+      echo "<td>".$res['observacion']."</td>";
 			echo "<td><a href=\"editView.php?id=$res[id]\">Editar</a></td>";
 			echo "<td><a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('¿Estas seguro que deseas elminar el usuario?')\">Eliminar</a></td>";
 			

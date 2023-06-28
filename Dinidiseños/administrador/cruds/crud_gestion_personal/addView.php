@@ -20,6 +20,10 @@
 				<td><input type="text" name="apellido"></td>
 			</tr>
 			<tr> 
+				<td>Rh</td>
+				<td><input type="text" name="rh"></td>
+			</tr>
+			<tr> 
 				<td>Tipo de documento</td>
 				<td><input type="text" name="tipodocumento"></td>
 			</tr>
@@ -34,6 +38,10 @@
 			<tr> 
 				<td>Telefono</td>
 				<td><input type="number" name="telefono"></td>
+			</tr>
+			<tr> 
+				<td>Observacion</td>
+				<td><input type="text" name="observacion"></td>
 			</tr>
 			<tr> 
 				<td></td>

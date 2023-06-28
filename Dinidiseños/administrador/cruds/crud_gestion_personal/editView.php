@@ -17,6 +17,7 @@ $tipodocumento = $resultData['tipodocumento'];
 $numerodocumento = $resultData['numerodocumento'];
 $correo = $resultData['correo'];
 $telefono = $resultData['telefono'];
+$observacion = $resultData['observacion'];
 ?>
 <html>
 <head>	
@@ -40,6 +41,10 @@ $telefono = $resultData['telefono'];
 				<td><input type="text" name="apellido" value="<?php echo $apellido; ?>"></td>
 			</tr>
 			<tr> 
+				<td>Rh</td>
+				<td><input type="text" name="rh" value="<?php echo $rh; ?>"></td>
+			</tr>
+			<tr> 
 				<td>Tipo de documetno</td>
 				<td><input type="text" name="tipodocumento" value="<?php echo $tipodocumento; ?>"></td>
 			</tr>
@@ -54,6 +59,10 @@ $telefono = $resultData['telefono'];
 			<tr> 
 				<td>Telefono</td>
 				<td><input type="number" name="telefono" value="<?php echo $telefono; ?>"></td>
+			</tr>
+			<tr> 
+				<td>Observacion</td>
+				<td><input type="text" name="observacion" value="<?php echo $observacion; ?>"></td>
 			</tr>
 			<tr>
 				<td><input type="hidden" name="id" value=<?php echo $id; ?>></td>
