@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-06-2023 a las 03:33:51
+-- Tiempo de generación: 28-06-2023 a las 04:53:56
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -40,7 +40,10 @@ CREATE TABLE `inventario` (
 --
 
 INSERT INTO `inventario` (`id`, `nombre`, `cantidad`, `precio`, `observacion`) VALUES
-(3, 'olivos laminados', 8, 2500, 'n/a');
+(3, 'olivos laminados', 8, 2500, 'n/a'),
+(4, 'cartulina', 255, 1000, 'es para impresiones de carteles promocinales del cliente'),
+(5, 'Madera', 1000, 50000, 'para tarjetas de presentacion'),
+(6, 'Papel delgado', 1500, 4000, 'para invitaciones ');
 
 -- --------------------------------------------------------
 
@@ -63,7 +66,10 @@ CREATE TABLE `proveedores` (
 --
 
 INSERT INTO `proveedores` (`id`, `nombre`, `nit`, `correo`, `telefono`, `productos`, `pedido`) VALUES
-(1, 'gaes 3 s.a.s', 12432423, 'gaes3.@gmail.com', 234234234, 'carton', '32 cartones para impresiones');
+(1, 'gaes 3 s.a.s', 12432423, 'gaes3.@gmail.com', 234234234, 'carton', '32 cartones para impresiones'),
+(3, 'ledezma s.a', 123123123, 'ledezma@empresa.com', 3123123, 'papeles', '4 mil papeles delgados'),
+(4, 'Gomez s.a', 345678912, 'Gomez@gmail.com', 312312312, 'Madera', '1mil unidades de madera '),
+(5, 'Calderon s.a', 312312421, 'Calderon@gmail.com', 2147483647, 'carton', '3 mil unidades de carton');
 
 -- --------------------------------------------------------
 
@@ -77,9 +83,9 @@ CREATE TABLE `users` (
   `apellido` varchar(50) NOT NULL,
   `rh` varchar(500) NOT NULL,
   `tipodocumento` varchar(30) NOT NULL,
-  `numerodocumento` int(12) NOT NULL,
+  `numerodocumento` int(13) NOT NULL,
   `correo` varchar(50) NOT NULL,
-  `telefono` varchar(11) NOT NULL,
+  `telefono` int(13) NOT NULL,
   `observacion` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -88,11 +94,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `nombre`, `apellido`, `rh`, `tipodocumento`, `numerodocumento`, `correo`, `telefono`, `observacion`) VALUES
-(1, 'fdsfsd', 'fsdfsd', '', 'fsdfsd', 34243, 'fsdfsd@gmail.com', '534534', ''),
-(2, 'Diego', 'Santana', '', 'Cedula', 12234758, 'diego@gmail.com', '122334566', ''),
-(3, 'Daniel', 'safas', '', 'cc', 132312312, 'dasdasd@kjh.com', '123123123', ''),
-(4, 'laura', 'la mami', '', 'cc', 3232, 'Santifewfer@mail.com', '234234234', ''),
-(5, 'andres', 'ledesma rodriguez', '', 'cc', 1064065, 'ledesad@gmail.com', '2131', '');
+(1, 'Luis', 'Melgarejo', 'O-\r\n', 'Cedula', 1001231232, 'luis@gmail.com', 2147483647, 'Ninguna'),
+(2, 'Diego', 'Santana', 'A+', 'Cedula', 12234758, 'diego@gmail.com', 2147483647, 'Ninguna\r\n'),
+(3, 'Daniel', 'Salazar', 'O+', 'Cedula', 1001231234, 'daniel@gmail.com', 313242341, 'Ninguna\r\n'),
+(4, 'Laura', 'De Santana', 'O+', 'Cedula', 1002312313, 'Santifewfer@mail.com', 2147483647, 'Ninguna'),
+(5, 'andres', 'ledesma rodriguez', 'AB-', 'Cedula', 106406531, 'ledesad@gmail.com', 2147483647, 'tiene dificultades de escucha ');
 
 -- --------------------------------------------------------
 
@@ -114,7 +120,10 @@ CREATE TABLE `ventas` (
 --
 
 INSERT INTO `ventas` (`id`, `cliente`, `material`, `pedido`, `imagen`, `precio`) VALUES
-(1, '', 'madera', 'tarjetas de cumpleaños', 'images.jpg', 35000);
+(1, 'jose', 'madera', 'tarjetas de cumpleaños', 'images.jpg', 35000),
+(2, 'Rodrigo', 'Carton', 'caja de regalo ', 'images.jpg', 20000),
+(3, 'Leonardo', 'Cartulina', 'Carteles promocionales ', 'Sin título.png', 3000),
+(4, 'Flor', 'Olivos Lamidos', 'tarjetas especiales', 'images (1).jpg', 50000);
 
 --
 -- Índices para tablas volcadas
@@ -152,13 +161,13 @@ ALTER TABLE `ventas`
 -- AUTO_INCREMENT de la tabla `inventario`
 --
 ALTER TABLE `inventario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedores`
 --
 ALTER TABLE `proveedores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
@@ -170,7 +179,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `ventas`
 --
 ALTER TABLE `ventas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
