@@ -18,6 +18,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM ventas ORDER BY id DESC");
 	</p>
 	<table width='80%' border=0>
 		<tr bgcolor='#DDDDDD'>
+			<td><strong>Cliente</strong></td>
 			<td><strong>Material</strong></td>
 			<td><strong>Pedido</strong></td>
 			<td><strong>Imagen</strong></td>
@@ -27,6 +28,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM ventas ORDER BY id DESC");
 		// Fetch the next row of a result set as an associative array
 		while ($res = mysqli_fetch_assoc($result)) {
 			echo "<tr>";
+			echo "<td>".$res['cliente']."</td>";
 			echo "<td>".$res['material']."</td>";
 			echo "<td>".$res['pedido']."</td>";
 			echo "<td>".$res['imagen']."</td>";

@@ -12,6 +12,10 @@
 	<form action="addAction.php" method="post" name="add">
 		<table width="25%" border="0">
 			<tr> 
+				<td>Cliente</td>
+				<td><input type="text" name="cliente"></td>
+			</tr>
+			<tr> 
 				<td>Material</td>
 				<td><input type="text" name="material"></td>
 			</tr>

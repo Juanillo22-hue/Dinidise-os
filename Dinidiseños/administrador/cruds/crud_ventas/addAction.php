@@ -10,12 +10,16 @@ require_once("../../dbConnection.php");
 
 if (isset($_POST['submit'])) {
 	// Escape special characters in string for use in SQL statement
+	$cliente = mysqli_real_escape_string($mysqli, $_POST['cliente']);	
 	$material = mysqli_real_escape_string($mysqli, $_POST['material']);	
 	$pedido = mysqli_real_escape_string($mysqli, $_POST['pedido']);
 	$imagen = mysqli_real_escape_string($mysqli, $_POST['imagen']);
 	$precio = mysqli_real_escape_string($mysqli, $_POST['precio']);
 	// Check for empty fields
-	if (empty($material) ||empty($pedido) || empty($imagen) || empty($precio)) {
+	if (empty($cliente) ||empty($material) ||empty($pedido) || empty($imagen) || empty($precio)) {
+		if (empty($cliente)) {
+			echo "<font color='red'>material field is empty.</font><br/>";
+		}
 		if (empty($material)) {
 			echo "<font color='red'>material field is empty.</font><br/>";
 		}
@@ -37,7 +41,7 @@ if (isset($_POST['submit'])) {
 		// If all the fields are filled (not empty) 
 
 		// Insert data into database
-		$result = mysqli_query($mysqli, "INSERT INTO ventas (`material`,`pedido`, `imagen`, `precio`) VALUES ('$material','$pedido', '$imagen', '$precio')");
+		$result = mysqli_query($mysqli, "INSERT INTO ventas (`cliente`,`material`,`pedido`, `imagen`, `precio`) VALUES ('$cliente','$material','$pedido', '$imagen', '$precio')");
 		
 		// Display success message
 		echo "<p><font color='green'>Informacion añadida satisfactoriamente</p>";

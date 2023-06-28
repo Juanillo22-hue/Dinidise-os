@@ -11,6 +11,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM ventas WHERE id = $id");
 // Fetch the next row of a result set as an associative array
 $resultData = mysqli_fetch_assoc($result);
 
+$cliente = $resultData['cliente'];
 $material = $resultData['material'];
 $pedido = $resultData['pedido'];
 $imagen = $resultData['imagen'];
@@ -29,6 +30,10 @@ $precio = $resultData['precio'];
 	
 	<form name="edit" method="post" action="editAction.php">
 		<table border="0">
+			<tr> 
+				<td>Cliente</td>
+				<td><input type="text" name="cliente" value="<?php echo $cliente; ?>"></td>
+			</tr>
 			<tr> 
 				<td>Material</td>
 				<td><input type="text" name="material" value="<?php echo $material; ?>"></td>
