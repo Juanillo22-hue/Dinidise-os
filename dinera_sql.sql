@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-06-2023 a las 06:13:45
+-- Tiempo de generación: 02-07-2023 a las 03:53:45
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -108,7 +108,12 @@ INSERT INTO `users` (`id`, `nombre`, `apellido`, `rh`, `tipodocumento`, `numerod
 (2, 'Diego', 'Santana', 'O+', 'Cedula', 12234758, 'diego@gmail.com', 2147483647, 'Ninguna', 'Recortes'),
 (3, 'Daniel', 'Salazar', 'O-', 'Cedula', 1001231234, 'daniel@gmail.com', 313242341, 'Ninguna', 'Ventas'),
 (4, 'Laura', 'De Santana', 'O+', 'Cedula', 1002312313, 'Santifewfer@mail.com', 2147483647, 'Ninguna', 'Impresiones'),
-(5, 'andres', 'ledesma rodriguez', 'AB-', 'Cedula', 106406531, 'ledesad@gmail.com', 2147483647, 'tiene dificultades de escucha ', 'Bodega');
+(5, 'Andres', 'Ledesma Rodriguez', 'AB-', 'Cedula', 106406531, 'ledesad@gmail.com', 2147483647, 'tiene dificultades de escucha ', 'Bodega'),
+(6, 'Jorge ', 'Chiquita', 'O-', 'Cedula', 2147483647, 'Jorge@gmail.com', 312312312, 'Tiene problemas psicologicos', 'Bodega'),
+(7, 'Eliecer', 'Rodriguez', 'A+', 'Cedula', 213412311, 'eliecer@gmail.com', 2147483647, 'Ninguna', 'Ventas'),
+(8, 'Alfredo', 'Cataño', 'A-', 'Cedula', 123454321, 'Catano@gmail.com', 2147483647, 'Ninguna', 'Armado de pedido'),
+(9, 'David', 'Cardenas', 'AB-', 'Cedula', 123456712, 'David@gmail.com', 2147483647, 'Ninguna', 'Recortes'),
+(10, 'Sofia', 'Mora', 'O+', 'Cedula', 1231213123, 'Mora@gmail.com', 2147483647, 'Ninguna', 'Impresiones');
 
 -- --------------------------------------------------------
 
@@ -133,7 +138,13 @@ INSERT INTO `ventas` (`id`, `cliente`, `material`, `pedido`, `imagen`, `precio`)
 (1, 'jose', 'madera', 'tarjetas de cumpleaños', 'images.jpg', 35000),
 (2, 'Rodrigo', 'Carton', 'caja de regalo ', 'images.jpg', 20000),
 (3, 'Leonardo', 'Cartulina', 'Carteles promocionales ', 'Sin título.png', 3000),
-(4, 'Flor', 'Olivos Lamidos', 'tarjetas especiales', 'images (1).jpg', 50000);
+(4, 'Flor', 'Olivos Lamidos', 'tarjetas especiales', 'images (1).jpg', 50000),
+(5, 'Wilson', 'Papel Delagado', 'Invitaciones de 15 años', 'images (1).jpg', 36800),
+(6, 'Jan', 'Carton', 'Caja para guardar vino', 'images.jpg', 12345),
+(7, 'Ian', 'Cartulina', 'Impresiones Publicitarias', 'descarga (3).jpg', 30000),
+(8, 'Erika', 'Papel Delagado', 'Mapas ', 'Sin título.png', 10000),
+(9, 'Marcela', 'Olivos Lamidos', 'Poster de invitacion a un lugar', 'descarga (2).jpg', 100000),
+(10, 'Luz', 'Madera', 'Tarjeta con el nombre', 'BALCO.png', 32300);
 
 --
 -- Índices para tablas volcadas
@@ -183,13 +194,13 @@ ALTER TABLE `proveedores`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `ventas`
 --
 ALTER TABLE `ventas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
