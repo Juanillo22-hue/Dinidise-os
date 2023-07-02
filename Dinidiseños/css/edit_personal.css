@@ -1,0 +1,116 @@
+body{
+    font-family: georgia, times, serif;
+	margin: 0%;
+	font-size: 1.3rem;
+	line-height: 1.3em;
+  background: url(https://images.unsplash.com/photo-1454117096348-e4abbeba002c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9uZG8lMjBkZWwlMjBzaXRpbyUyMHdlYnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80);  
+}
+/*Estilos para el encabezado*/
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;left: 0;
+  }
+  .container1{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .container1 .btn-menu, .logo{
+    float: left;
+    line-height:100px;
+  }
+  .container1 .btn-menu label{
+    color: #070707;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .logo h1{
+    color: #070707;
+    font-weight: 200;
+    margin-left: 10px;
+    letter-spacing: 5px;
+    font-size: 2.1rem;
+  
+  }
+  .container1 .menus{
+    float: right;
+    line-height: 100px;
+  }
+  .container1 .menus a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #000000;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 22px;
+    margin-right: 5px;
+  }
+  .container1 .menus a:hover{
+    border-bottom: 2px solid #111111;
+    padding-bottom: 5px;
+  }
+
+.tabla{
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    margin: 12% 35%;
+    background-color: #c5c5c5;
+    border-radius: 12px;
+}
+.tabla h2{
+text-align: center;
+background-color: #aaaaaa;
+margin: 10px 2px 32px;
+border-radius: 44px;
+}
+.tabla table{
+    background-color: #727272;
+    margin: 52px 72px;
+    padding: 9px;
+    border-radius: 10px;
+}
+.tabla td{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.tabla td input{
+    background-color: #8d8d8d;
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+  /* Footer */
+.footer {
+    display: flex;
+    background: #313131 ;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: 279px;
+    width: 100%;
+  }
+  .footer_titulo{
+    letter-spacing: 5px;
+    font-size: 1.1rem;
+    margin: 0 34%;
+  
+  }
+  .footer_logo{
+  
+  width: 5%;
+  display: block;
+  }
+  

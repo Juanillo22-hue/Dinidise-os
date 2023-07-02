@@ -1,0 +1,307 @@
+body {
+	font-family: georgia, times, serif;
+	margin: 0%;
+  padding: 0%;
+	font-size: 1.3rem;
+	line-height: 1.3em;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+
+.header {
+  color: white;
+  background:#313131 ;
+  z-index: 3;
+  left: 0;
+  top: 0%;
+  position: fixed;
+  right: 0;
+  
+}
+.header a {
+  color: #c0c0c0;
+  text-decoration: none;
+}
+
+.nav-container{
+  padding: 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+ .container {
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+.navigation ul {
+ margin: 0%;
+ padding: 0%;
+ list-style: none;
+}
+.navigation ul li {
+  display: inline-block;
+}
+.navigation ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.4s linear;
+  border-radius: 5px;
+}
+
+.navigation ul li a:hover {
+  background: #4e4d4d70;
+}
+
+.titulo{
+  letter-spacing: 5px;
+  font-size: 2.1rem;
+
+}
+
+.logo {
+    width: 110px;
+    
+
+}
+.menu-icon {
+  display: none;
+}
+
+.submenu{
+  position: absolute;
+  background-color: #313131;
+  z-index: 3;
+  width: 12%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+.submenu li a{
+padding: 2%;
+display: inline-block;
+color: #ffffff;
+}
+.navigation li:hover .submenu{
+visibility: visible;
+opacity: 1;
+}
+.main {
+  padding-top: 10rem ;
+}
+.sec{
+    display: flex;
+    margin-inline: 1%;
+    width: 1000px;
+    height: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.sec img{
+    width: 0px;
+    flex-grow: 3;
+    object-fit: cover;
+    opacity: .8;
+    transition: .8s ease;
+    border-radius: 3px;
+}
+
+.sec img:hover{
+    cursor: crosshair;
+    width: 450px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+/* Home cards */
+  .home-cards {
+    display: flex;
+    grid-gap: 9px;
+    margin-bottom: 50px;
+  }
+  
+  .home-cards img {
+    margin: 40px;
+    width: 70%;
+    margin-bottom: 2px;
+  }
+  
+  .home-cards h3 {
+    text-align: center;
+    margin: 1%;
+  }
+  
+  .home-cards a {
+    
+    margin: 20%;
+    color: #30373d;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+
+  }
+  .home-cards p {
+     margin: 10%;
+  }
+  .home-cards a:hover i {
+    margin-left: 10px;
+  }
+ .home-cards {
+      grid-template-columns: repeat(3, 3fr);
+    }
+
+@media(max-width: 500px) {
+    .home-cards {
+      grid-template-columns: 1fr;
+    }
+     .links .links-inner {
+      grid-template-columns: 1fr;
+    }
+  
+    .links .links-inner ul {
+      margin-bottom: 20px;
+    }
+  }
+  
+/* Carbon */
+  .carbon {
+    width: 100%;
+    height: 350px;
+    background: url('https://img.freepik.com/foto-gratis/fondo-acuarela-pintada-mano-forma-cielo-nubes_24972-1095.jpg?w=2000') no-repeat center center/cover;
+  }
+.carbon.content {
+
+    width: 50%;
+    padding: 50px 0 0 30px;
+  }
+  .carbon p {
+  	margin-top: 12px;
+    margin: 10px 0 20px;
+    color: rgb(0, 0, 0);
+  }
+
+  .carbon a {
+  	color: rgb(0, 0, 0);
+  	font-size: 1.9rem;
+  }
+  /* Follow */
+
+  
+ 
+  .follow img {
+    margin: 1px;
+    
+  }
+   /* Links */
+  .links {
+    
+    color: #3d3c3c;
+  }
+  .links ul {
+    list-style-type: none;
+  }
+  .links li {
+    padding: .1%;
+    list-style: none;
+    float: left;
+    text-align: center;
+    width: 22%;
+    font-size: .1rem;
+  }
+  .links li a {
+    text-decoration: underline dotted;
+
+
+  }
+  
+  
+
+
+  /* Footer */
+  .footer {
+    display: flex;
+    background: #313131 ;
+    text-align: center;
+    color: rgb(5, 5, 5);
+    margin-top: auto;
+  }
+  .footer_titulo{
+    letter-spacing: 5px;
+    font-size: 1.1rem;
+    margin: 0 34%;
+  
+  }
+ .footer_logo{
+
+  width: 5%;
+  display: block;
+ }
+  @media(max-width: 700px) {
+  
+  
+ 
+   
+    .xbox .content p {
+      display: none;
+    }
+  
+    .xbox .content h2 {
+      margin-bottom: 20px;
+    }
+  
+    .carbon .content {
+      width: 85%;
+    }
+  
+    .links .links-inner {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+
+  @media only screen and (max-width: 767px) {
+
+    .menu-icon {
+      display: block;
+      padding: 0.5rem 1rem;
+    }
+
+      .navigation {
+        width: 100%;
+        margin-top: 1rem;
+      }
+    .navigation ul {
+      display: none;
+    }
+    .navigation ul.show {
+      display: block;
+    }
+     .navigation ul li {
+       display:block;
+     }
+     .navigation ul li a {
+       display: block;
+       padding: 0.5rem 0rem;
+       transition: all 0.4s linear;
+       border-radius: 5px;
+     }
+     
+     .navigation ul li a:hover {
+       background: #4e4d4d70;
+     }
+     
+
+  }
+  .btn{
+    text-decoration: none;
+    margin: 40%;
+    
+  }
