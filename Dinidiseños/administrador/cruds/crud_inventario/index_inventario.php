@@ -61,7 +61,7 @@
 
     <li><a href="../crud_proveedores/index_proveedores.php">Gestion de proveedores</a></li>
 
-    <li><a href="../cruds/crud_ventas/index_ventas.php">Gestion de ventas</a></li>
+    <li><a href="../crud_ventas/index_ventas.php">Gestion de ventas</a></li>
 </ul>
 <label for="btn-menu" class="icon-cancel-circled"></label>
 
